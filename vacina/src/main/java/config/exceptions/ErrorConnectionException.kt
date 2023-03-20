@@ -1,0 +1,5 @@
+package config.exceptions
+
+class ErrorConnectionDatabaseException(message: String) : Exception(message) {
+    constructor() : this("Error in connection database")
+}
