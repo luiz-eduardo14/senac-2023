@@ -1,4 +1,7 @@
 vacina/.idea
 vacina/vacina.iml
 vacina/.env
-vacina/target
+vacina/.classpath
+vacina/.project
+vacina/.settings/
+vacina/target/
