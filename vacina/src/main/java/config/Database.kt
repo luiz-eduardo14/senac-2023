@@ -24,7 +24,6 @@ class Database {
             mapConfigHibernete[Environment.SHOW_SQL] = "false";
             mapConfigHibernete[Environment.CURRENT_SESSION_CONTEXT_CLASS] = "thread";
             mapConfigHibernete[Environment.HBM2DDL_AUTO] = "update";
-            mapConfigHibernete[Environment.POOL_SIZE] = "5";
             java.util.logging.Logger.getLogger("org.hibernate").level = Level.WARNING;
             return Persistence.createEntityManagerFactory("main",mapConfigHibernete)
         }

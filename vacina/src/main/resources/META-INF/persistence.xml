@@ -13,7 +13,7 @@
             <property name="javax.persistence.jdbc.user" value="$DATABASE_USERNAME" />
             <property name="javax.persistence.jdbc.password" value="$DATABASE_PASSWORD" />
             <property name="hibernate.hbm2ddl.auto" value="create" />
-
+            <property name="hibernate.connection.pool_size" value="10" />
             <!-- https://docs.jboss.org/hibernate/orm/5.4/javadocs/org/hibernate/dialect/package-summary.html -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
         </properties>
