@@ -6,6 +6,12 @@ import java.util.logging.Level
 import javax.persistence.EntityManagerFactory
 import javax.persistence.Persistence
 
+
+
+
+
+
+
 class Database {
     companion object{
         private fun createEntityManager(listEnv: Map<String,String>): EntityManagerFactory{
@@ -19,7 +25,7 @@ class Database {
             mapConfigHibernete[Environment.CURRENT_SESSION_CONTEXT_CLASS] = "thread";
             mapConfigHibernete[Environment.HBM2DDL_AUTO] = "update";
             mapConfigHibernete[Environment.POOL_SIZE] = "5";
-            java.util.logging.Logger.getLogger("org.hibernate").level = Level.OFF;
+            java.util.logging.Logger.getLogger("org.hibernate").level = Level.WARNING;
             return Persistence.createEntityManagerFactory("main",mapConfigHibernete)
         }
 
