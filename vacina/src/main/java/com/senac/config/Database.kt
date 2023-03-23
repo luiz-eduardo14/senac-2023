@@ -1,16 +1,10 @@
-package config;
+package com.senac.config;
 
 import org.hibernate.cfg.Environment
 import java.util.Optional
 import java.util.logging.Level
 import javax.persistence.EntityManagerFactory
 import javax.persistence.Persistence
-
-
-
-
-
-
 
 class Database {
     companion object{
@@ -28,7 +22,7 @@ class Database {
             return Persistence.createEntityManagerFactory("main",mapConfigHibernete)
         }
 
-        val entityManager = createEntityManager(System.getenv())
+        val entityManagerFactory = createEntityManager(System.getenv())
     }
 }
 

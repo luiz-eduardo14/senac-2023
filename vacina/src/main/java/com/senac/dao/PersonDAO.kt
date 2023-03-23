@@ -1,7 +1,7 @@
 //package dao
 //
 //import config.Database
-//import model.Person
+//import com.senac.model.Person
 //
 //class PersonDAO {
 //

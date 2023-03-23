@@ -1,4 +1,4 @@
-package model
+package com.senac.model
 
 import java.time.LocalDate
 import javax.persistence.*

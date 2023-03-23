@@ -1,8 +1,8 @@
-package utils
+package com.senac.utils
 
-import config.ViewConst
-import interfaces.RunProgram;
-import interfaces.View
+import com.senac.config.ViewConst
+import com.senac.interfaces.RunProgram;
+import com.senac.interfaces.View
 import org.reflections.Reflections
 import java.util.logging.Level
 import kotlin.collections.ArrayList
@@ -24,7 +24,7 @@ class AnnotationUtils {
 
         private fun findAllClassInPackage(): List<Class<RunProgram>> {
             java.util.logging.Logger.getLogger("org.reflections").level = Level.OFF
-            val reflections = Reflections("view")
+            val reflections = Reflections("com.senac.view")
             val listPrograms = ArrayList<Class<RunProgram>>()
 
             reflections.getSubTypesOf(RunProgram::class.java)

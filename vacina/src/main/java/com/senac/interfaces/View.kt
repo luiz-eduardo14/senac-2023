@@ -1,6 +1,6 @@
-package `interfaces`
+package com.senac.interfaces
 
-import config.ViewConst
+import com.senac.config.ViewConst
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
