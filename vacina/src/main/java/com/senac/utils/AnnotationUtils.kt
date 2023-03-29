@@ -31,8 +31,6 @@ class AnnotationUtils {
                 .stream()
                 .forEach() {
                     if(it.getConstructor().newInstance() is RunProgram){
-
-
                         listPrograms.add(it as Class<RunProgram>)
                     }else{
                         throw Exception("Class ${it.name} not implement interface ${RunProgram::class.java.simpleName}");
