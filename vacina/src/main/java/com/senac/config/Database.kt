@@ -8,8 +8,9 @@ import javax.persistence.Persistence
 
 class Database {
     companion object{
-        private fun createEntityManager(listEnv: Map<String,String>): EntityManagerFactory{
+        fun createEntityManager(): EntityManagerFactory{
             val mapConfigHibernete = HashMap<String,String>();
+            val listEnv = System.getenv();
             mapConfigHibernete[Environment.URL] = Optional.ofNullable(listEnv["DATABASE_URL"]).orElseThrow();
             mapConfigHibernete[Environment.USER] = Optional.ofNullable(listEnv["DATABASE_USERNAME"]).orElseThrow();
             mapConfigHibernete[Environment.PASS] = Optional.ofNullable(listEnv["DATABASE_PASSWORD"]).orElseThrow();
@@ -22,7 +23,6 @@ class Database {
             return Persistence.createEntityManagerFactory("main",mapConfigHibernete)
         }
 
-        val entityManagerFactory = createEntityManager(System.getenv())
     }
 }
 
